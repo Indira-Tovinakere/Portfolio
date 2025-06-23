@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Portfolio.Domain.Infos>
+
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Portfolio of Indira Tovinakere Rajesh</h2>
+
+    <div class="mb-4 text-center">
+        <a href="mailto:indira.tovinakere@gmail.com" class="btn btn-outline-primary me-2">Email</a>
+        <a href="https://github.com/Indira-Tovinakere" target="_blank" class="btn btn-outline-dark me-2">GitHub</a>
+        <a href="https://www.linkedin.com/in/indira-tovinakere-rajesh-32670b260/" target="_blank" class="btn btn-outline-info me-2">LinkedIn</a>
+        <a href="/pdfs/Indira_T_Rajesh.pdf" class="btn btn-outline-success" download>Download Resume (PDF)</a>
+    </div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Sl No</th>
+                <th>Name</th>
+                <th>Education</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var info in Model)
+            {
+                <tr>
+                    <td>@info.Slno</td>
+                    <td>@info.Name</td>
+                    <td>@info.Education</td>
+                    <td>@info.Phonenumber</td>
+                    <td>@info.EmailId</td>
+                    <td>@info.Address</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
