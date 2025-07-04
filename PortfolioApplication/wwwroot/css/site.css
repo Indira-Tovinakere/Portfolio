@@ -1,22 +1,190 @@
-html {
-  font-size: 14px;
-}
+/* === Sleek CSE Graduate Portfolio CSS (No Neon, No Creep) === */
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* ---- Base Setup ---- */
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman';
+    color: black;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    overflow-x: hidden;
+    position: relative;
 }
+
+    /* ---- Subtle Grid Overlay ---- */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 1px, transparent 2px), repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 2px);
+        background-size: 40px 40px;
+        z-index: -2;
+        animation: gridFloat 120s linear infinite;
+    }
+
+@keyframes gridFloat {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 1000px 1000px;
+    }
+}
+
+/* ---- Container Glass Effect ---- */
+.container {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    max-width: 1000px;
+    margin: 60px auto;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    animation: fadeIn 1s ease-in;
+}
+
+/* ---- Headings ---- */
+h1, h2, h3 {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.08);
+}
+
+/* ---- Paragraph & Lead ---- */
+p, .lead {
+    color: #cccccc;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* ---- Buttons ---- */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 500;
+    border: 2px solid #ffffff44;
+    color: #ffffff;
+    background: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+    .btn:hover {
+        background: #ffffff;
+        color: #121212;
+        transform: scale(1.04);
+        box-shadow: 0 0 10px rgba(255,255,255,0.15);
+    }
+
+/* ---- Cards ---- */
+.card {
+    background: rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+    .card:hover {
+        transform: scale(1.015);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    }
+
+/* ---- Tables ---- */
+.table {
+    background: rgba(255, 255, 255, 0.025);
+    color: #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+    .table th {
+        background: rgba(255,255,255,0.05);
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .table td {
+        color: #ccc;
+    }
+
+/* ---- Animations ---- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+    }
+}
+
+.edu-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.07); /* Neutral border */
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05); /* Subtle white glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .edu-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 30px rgba(255, 255, 255, 0.1); /* Light hover glow */
+    }
+
+.contact-section a.btn {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .contact-section a.btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+    }
+.table-wrapper {
+    max-width: 400px;
+    width: 100%;
+}
+.profile-pic {
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .profile-pic:hover {
+        transform: scale(1.05);
+    }

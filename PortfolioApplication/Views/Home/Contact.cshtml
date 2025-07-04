@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Portfolio.Domain.Infos>
+
+<!-- Contact Section -->
+<div class="text-center mb-5 contact-section container">
+    <h3 class="fw-bold mb-4">CONTACT ME</h3>
+    <p class="lead mb-4">Feel free to reach out to me via email or connect on LinkedIn.</p>
+
+    <!-- Contact Buttons with Logos -->
+    <div class="mb-4 d-flex justify-content-center flex-wrap gap-3">
+
+        <!-- Email -->
+        <a href="mailto:indira.tovinakere@gmail.com" class="btn btn-outline-light d-flex align-items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="24" height="24" class="me-2" />
+            Email Me
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/indira-tovinakere-rajesh-32670b260/" target="_blank" class="btn btn-outline-info d-flex align-items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="24" height="24" class="me-2" />
+            LinkedIn Profile
+        </a>
+    </div>
+
+    <!-- Table with Logos -->
+    <div class="table-wrapper mx-auto">
+        <div class="table-responsive mt-4">
+            <table class="table table-dark table-bordered table-hover shadow-sm text-center">
+                <thead>
+                    <tr>
+                        <th>
+                            <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Phone" width="20" class="me-2" />
+                            Phone
+                        </th>
+                        <th>
+                            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Address" width="20" class="me-2" />
+                            Address
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var info in Model)
+                    {
+                        <tr>
+                            <td>@info.Phonenumber</td>
+                            <td>@info.Address</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Resume Download -->
+    <p class="lead mt-4">Download my resume below:</p>
+    <a href="~/pdfs/Indira T Rajesh.pdf"
+       class="btn btn-outline-success d-inline-flex align-items-center px-3 py-2 small"
+       asp-append-version="true"
+       download
+       type="application/pdf">
+       Download Resume
+    </a>
+</div>

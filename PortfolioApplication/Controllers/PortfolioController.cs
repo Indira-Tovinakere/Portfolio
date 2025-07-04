@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 public class PortfolioController : Controller
 {
     private readonly IService _service;
-
     public PortfolioController(IService service)
     {
         _service = service;
@@ -14,4 +13,9 @@ public class PortfolioController : Controller
         var infos = await _service.GetAllAsync();
         return View(infos);
     }
+
+    //public async Task<IActionResult> Indexs()
+    //{
+    //    return View();
+    //}
 }

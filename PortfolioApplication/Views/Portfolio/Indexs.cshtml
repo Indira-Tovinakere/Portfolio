@@ -1,38 +1,29 @@
 ﻿@model IEnumerable<Portfolio.Domain.Infos>
+<link rel="stylesheet" href="~/css/site.css" />
 
-<div class="container mt-5">
-    <h2 class="mb-4 text-center">Portfolio of Indira Tovinakere Rajesh</h2>
-
-    <div class="mb-4 text-center">
-        <a href="mailto:indira.tovinakere@gmail.com" class="btn btn-outline-primary me-2">Email</a>
-        <a href="https://github.com/Indira-Tovinakere" target="_blank" class="btn btn-outline-dark me-2">GitHub</a>
-        <a href="https://www.linkedin.com/in/indira-tovinakere-rajesh-32670b260/" target="_blank" class="btn btn-outline-info me-2">LinkedIn</a>
-        <a href="/pdfs/Indira_T_Rajesh.pdf" class="btn btn-outline-success" download>Download Resume (PDF)</a>
+<div class="container mt-5 p-4 rounded shadow-lg glassmorph">
+    <!-- Header -->
+    <div class="text-center mb-4">
+        <h1 class="fw-bold mb-2">Indira Tovinakere Rajesh</h1>
+        <img src="~/images/Indira (2).jpeg"
+             asp-append-version="true"
+             class="profile-pic"
+             alt="Indira Tovinakere Rajesh"
+             width="200" height="200" />
     </div>
 
-    <table class="table table-bordered table-hover">
-        <thead class="table-dark">
-            <tr>
-                <th>Sl No</th>
-                <th>Name</th>
-                <th>Education</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Address</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var info in Model)
-            {
-                <tr>
-                    <td>@info.Slno</td>
-                    <td>@info.Name</td>
-                    <td>@info.Education</td>
-                    <td>@info.Phonenumber</td>
-                    <td>@info.EmailId</td>
-                    <td>@info.Address</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <!-- Intro -->
+    <div class="text-center mb-5">
+        <h3 class="fw-bold mb-3">Aspiring Software Engineer | CSE Graduate</h3>
+
+        <p class="lead">
+            I am a passionate Computer Science Engineering graduate with a strong interest in building impactful and user-friendly software. I enjoy turning ideas into functional solutions and continuously exploring new ways to improve and grow as a developer.
+        </p>
+        <p class="lead">
+            Throughout my academic journey, I worked on various hands-on projects that enhanced my understanding of software design principles, clean code practices, and development methodologies.
+        </p>
+        <p class="lead">
+            This portfolio is a product of my personal initiative and is built using the ASP.NET Core MVC framework. It showcases my dedication to continuous learning, craftsmanship, and my enthusiasm for software development.
+        </p>
+    </div>
 </div>
