@@ -188,3 +188,20 @@ p, .lead {
     .profile-pic:hover {
         transform: scale(1.05);
     }
+.timeline-item {
+    border-left: 3px solid #0dcaf0;
+    padding-left: 15px;
+    position: relative;
+}
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -9px;
+        width: 16px;
+        height: 16px;
+        background-color: 
+            #0dcaf0;
+        border-radius: 50%;
+    }

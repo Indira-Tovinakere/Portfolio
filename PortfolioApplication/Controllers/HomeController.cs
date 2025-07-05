@@ -31,6 +31,14 @@ namespace PortfolioApplication.Controllers
         {
             return View();
         }
+        public IActionResult Certificates()
+        {
+            return View();
+        }
+        public IActionResult Experience()
+        {
+            return View();
+        }
         public async Task<IActionResult> Contact()
         {
             var infos = await _service.GetAllAsync();
